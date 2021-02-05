@@ -1,0 +1,14 @@
+.mat-list.mat-list.mat-list-base{
+    cursor: pointer;
+}
+mat-list-item.mat-list-item{
+    border-bottom:1px solid #cccccc;
+}
+.right-br{
+    border-right: 1px solid #cccccc;
+}
+.list-item-active {
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.04);
+    color: #000000;
+  }

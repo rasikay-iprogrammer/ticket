@@ -1,47 +1,75 @@
 <div class="container-fluid pt-2 bg-white">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 pb-2">
-            Booking Summary
+        
+        <div class="col-xs-12 col-sm-12 col-lg-8">
+            <p class="booking-summary"> Booking Summary
+            </p>
+            <p class=" movie-name">{{ticketinfo.movieName}}</p>
+            <p class="booing-summary-info ticket-info">{{ticketinfo.grade}}| {{ticketinfo.language}}</p>
+            <p class="booing-summary-info theater-name"> {{ticketinfo.theaterName}}</p>        
         </div>
-        <div class="col-12">
+        <div class="col-xs-12 col-sm-12 col-lg-4">
+            <div class="img-right">
+                <img src="./assets/poster.png"/>
+            </div>
+        </div>
+
+        
+        <!-- <div class="col-12">
             <strong>{{ticketinfo.movieName}}</strong>
             <p>{{ticketinfo.grade}}| {{ticketinfo.language}}</p>
             <p> {{ticketinfo.theaterName}}</p>
             <p> {{ticketinfo.seatNo}} </p>
             <p> <strong>{{ticketinfo.bookDateTime | date:'d MMM, yyyy hh:mm a'}}</strong></p>
 
-        </div>
+        </div> -->
 
     </div>
     <div class="row">
+        <div class="col-xs-12 col-sm-12 col-lg-8">
+          
+            <p class="booing-summary-info ticket-info">{{ticketinfo.seatNo}}|</p>
+            <p class="booing-summary-info ticket-bold"> {{ticketinfo.bookDateTime | date:'d MMM, yyyy hh:mm a'}}</p>        
+        </div>
+        <div class="col-xs-12 col-sm-12 col-lg-4">
+          <p class="ticket-bold-no">7</p>
+          <p class="ticket-info">Tickets</p>
+        </div>
+    </div>
+    <div class="row row-dotted-line">
+        <div class="hori-line">
+            <img src="./assets/border-doted.png"/>
+        </div>
+    </div>
+    <div class="row">
         <ul class="list-group mb-3 col-12">
-            <li class="list-group-item d-flex justify-content-between lh-condensed border-0 pb-0 pt-0">
+            <li class="font-10 list-group-item d-flex justify-content-between lh-condensed border-0 pb-0 pt-0">
                 <div>
-                    <h6 class="my-0">Sub Total</h6>
+                    <p class="">Sub Total</p>
                     <!-- <small class="text-muted">Rs 1652</small> -->
                 </div>
-                <span class="text-muted">{{ticketinfo.total| currency:'INR'}}</span>
+                <span class="font-weight-bold">{{ticketinfo.total| currency:'INR'}}</span>
             </li>
-            <li class="list-group-item d-flex justify-content-between lh-condensed border-0 pb-0 pt-0">
+            <li class=" font-10 list-group-item d-flex justify-content-between lh-condensed border-0 pb-0 pt-0">
                 <div>
-                    <h6 class="my-0">Booking Fees</h6>
+                    <p class="">Booking Fees</p>
                     <!-- <small class="text-muted">Brief description</small> -->
                 </div>
-                <span class="text-muted">{{globalConst.bookingFees| currency:'INR'}}</span>
+                <span class="font-weight-bold">{{globalConst.bookingFees| currency:'INR'}}</span>
             </li>
-            <li class="list-group-item d-flex justify-content-between lh-condensed border-0 pb-0 pt-0">
+            <li class="font-10 list-group-item d-flex justify-content-between lh-condensed border-0 pb-0 pt-0">
                 <div>
-                    <h6 class="my-0">Integrated GST (IGST) @ {{globalConst.gstPercentage}}%</h6>
+                    <p class="">Integrated GST (IGST) @ {{globalConst.gstPercentage}}%</p>
                     <!-- <small class="text-muted">Brief description</small> -->
                 </div>
-                <span class="text-muted">{{ticketinfo.gstAmount | currency:'INR'}}</span>
+                <span class="font-weight-bold">{{ticketinfo.gstAmount | currency:'INR'}}</span>
             </li>
            
         </ul>
     </div>
-    <div class="row">
-        <span class="col-8 d-block p-2 bg-pink text-white">Amount Payable</span>
-        <span class="col-4 text-right d-block p-2 bg-pink text-white">{{ticketinfo.finalTotal| currency:'INR'}}</span>
+    <div class="row bg-pink">
+        <div class="col-8 text-white pt-2 pb-2 font-10">Amount Payable</div>
+        <div class="col-4 text-white pt-2 pb-2 font-16">{{ticketinfo.finalTotal| currency:'INR'}}</div>
 
     </div>
 </div>

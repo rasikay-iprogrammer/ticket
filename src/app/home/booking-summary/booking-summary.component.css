@@ -1,5 +1,42 @@
 .bg-pink{
-    background-color: #c86dd7
+    background-color: #c86dd7 ;
+}
+.movie-name{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 12px 0px 5px 0px;
 
-    ;
+}
+.ticket-info{
+    font-size: 13px;
+}
+.theater-name{
+    font-size: 13px;
+}
+.booking-summary{
+    text-transform: uppercase;
+    color: #5c636f;
+    font-size: 12px;
+
+
+}
+.booing-summary-info{
+    padding: 0px;
+    margin: 0px;;
+}
+.ticket-info{
+    font-size: 10px;
+
+}
+.ticket-bold{
+    font-size: 13px;
+font-weight: bold;
+}
+.ticket-bold-no{
+    font-size: 16px;
+    margin: 0px;
+    font-weight: bold;
+}
+.hori-line img{
+    max-width: 100%;
 }

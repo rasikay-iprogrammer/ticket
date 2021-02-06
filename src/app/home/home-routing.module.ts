@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes,CanActivate } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { CheckoutpageComponent } from './checkoutpage/checkoutpage.component';
 import { BookingSuccessComponent } from './booking-success/booking-success.component';
+import { LandingComponent } from './landing/landing.component';
+import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes = [
   {
@@ -11,9 +13,10 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       { path: '', redirectTo: 'checkout', pathMatch: 'prefix' },
+      { path: 'home', component: LandingComponent },
       { path: 'checkout', component: CheckoutpageComponent },
-      { path: 'booking-success', component: BookingSuccessComponent }  
-
+      { path: 'booking-success', component: BookingSuccessComponent, canActivate: [AuthGuardService]  }  ,
+     
     ]
   }
 ];

@@ -5,8 +5,8 @@
   <div class="col-md-8 order-md-1">
     <form  [formGroup]="form">
 
-    <mat-accordion class="example-headers-align" multi [togglePosition]="'before'">
-      <mat-expansion-panel [expanded]="true">
+    <mat-accordion class="example-headers-align" multi [togglePosition]="'before'" class="font-10">
+      <mat-expansion-panel [expanded]="true" >
         <mat-expansion-panel-header >
           <mat-panel-title>
             Share Your Contact Details
@@ -22,12 +22,12 @@
     
       </mat-expansion-panel>
       <mat-expansion-panel expanded disabled class="sign-req">
-        <mat-expansion-panel-header>
+        <mat-expansion-panel-header class="sign-option">
           <mat-panel-title>
             Please sign-in to use Nela Ticket Credits or Quikpay
           </mat-panel-title>
           <mat-panel-description>
-            <button mat-stroked-button  (click)="expandPannel()">Sign-in</button>
+            <button mat-stroked-button class="sing-in-btn" (click)="expandPannel()">Sign-in</button>
 
           </mat-panel-description>
         </mat-expansion-panel-header>
@@ -45,12 +45,12 @@
           </mat-panel-title>
         
         </mat-expansion-panel-header>
-        <div class="row"> 
-          <div class="col-md-4 order-md-1 right-br">
+        <div class="row font-10"> 
+          <div class="col-md-4 order-md-1 right-br ">
             <mat-list role="list">
-              <mat-list-item  role="listitem" [class.list-item-active]="activeTab=='card'" (click)="changeTab('card')">Credit/Debit Card</mat-list-item>
-              <mat-list-item role="listitem" [class.list-item-active]="activeTab=='netbanking'" (click)="changeTab('netbanking')">Netbanking</mat-list-item>
-              <mat-list-item role="listitem"  [class.list-item-active]="activeTab=='wallet'" (click)="changeTab('wallet')">Wallet</mat-list-item>
+              <mat-list-item class="font-10" role="listitem" [class.list-item-active]="activeTab=='card'" (click)="changeTab('card')">Credit/Debit Card</mat-list-item>
+              <mat-list-item class="font-10" role="listitem" [class.list-item-active]="activeTab=='netbanking'" (click)="changeTab('netbanking')">Netbanking</mat-list-item>
+              <mat-list-item class="font-10" role="listitem"  [class.list-item-active]="activeTab=='wallet'" (click)="changeTab('wallet')">Wallet</mat-list-item>
             </mat-list>
           </div>
           <div class="col-md-8 order-md-2">

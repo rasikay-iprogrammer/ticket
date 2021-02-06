@@ -13,7 +13,7 @@ export class PaymentOptionComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
-      creditCardNumber: [this.paymentArr.creditCardNumber, [Validators.required,Validators.pattern("\\d{16}")]],
+      creditCardNumber: [this.paymentArr.creditCardNumber, [Validators.required,Validators.minLength(19)]],
       nameOnCard: [this.paymentArr.nameOnCard, [Validators.required]],
       expiryDate: [this.paymentArr.expiryDate, [Validators.required]],
       cvv: [this.paymentArr.cvv, [Validators.required]],

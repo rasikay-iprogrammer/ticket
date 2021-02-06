@@ -4,12 +4,12 @@
       <div class="col-lg-8">
         <mat-form-field class="full-width-field">
           <mat-label>Card Number</mat-label>
-          <input matInput type="text" maxlength="16"  placeholder="Card Number"  formControlName="creditCardNumber" >
+          <input matInput appOnlyDigits appCardNumberMask type="text" maxlength="19"  placeholder="Card Number"  formControlName="creditCardNumber" >
           <mat-error  *ngIf="f.creditCardNumber.errors">
             <span *ngIf="f.creditCardNumber.hasError('required') && (f.creditCardNumber.dirty || f.creditCardNumber.touched)">
               Valid Card Number required
             </span>     
-            <span *ngIf="f.creditCardNumber.hasError('pattern') && (f.creditCardNumber.dirty || f.creditCardNumber.touched)">
+            <span *ngIf="f.creditCardNumber.hasError('minlength') && (f.creditCardNumber.dirty || f.creditCardNumber.touched)">
               Valid Card Number required
             </span>           
           </mat-error>
@@ -18,7 +18,7 @@
       <div class="col-lg-8">
         <mat-form-field class="full-width-field">
           <mat-label>Name on the card</mat-label>
-          <input matInput type="text"  placeholder="Name on the card" formControlName="nameOnCard" >
+          <input matInput type="text" appOnlyAlphabets placeholder="Name on the card" formControlName="nameOnCard" >
           <mat-error *ngIf="f.nameOnCard.errors"> 
             <span *ngIf="f.nameOnCard.hasError('required') && (f.nameOnCard.dirty || f.nameOnCard.touched)">
               Valid Name required
@@ -32,7 +32,7 @@
 
             <mat-form-field class="full-width-field">
               <mat-label>Expiry Date</mat-label>
-              <input matInput type="text" mask placeholder="MM/YY" formControlName="expiryDate" >
+              <input matInput appOnlyDigits type="text" mask placeholder="MM/YY" formControlName="expiryDate" >
               <mat-error *ngIf="f.expiryDate.errors"> 
                 <span *ngIf="f.expiryDate.hasError('required') && (f.expiryDate.dirty || f.expiryDate.touched)">
                   Valid Expiry date required
@@ -43,7 +43,7 @@
           <div class="col-lg-3">
             <mat-form-field class="full-width-field">
               <mat-label>CVV</mat-label>
-              <input matInput type="text"  minlength="3" maxlength="3" placeholder="CVV" formControlName="cvv" >
+              <input matInput type="password"  minlength="3" maxlength="3" placeholder="CVV" formControlName="cvv" >
               <mat-error *ngIf="f.cvv.errors"> 
                 <span *ngIf="f.cvv.hasError('required') && (f.cvv.dirty || f.cvv.touched)">
                   Valid Name required

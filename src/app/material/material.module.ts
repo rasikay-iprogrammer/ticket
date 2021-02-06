@@ -13,6 +13,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 @NgModule({
   imports: [
@@ -30,6 +32,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatSidenavModule,
     FormsModule,
     ReactiveFormsModule,
+    MatSnackBarModule
   ],
   exports:[
     MatToolbarModule,
@@ -45,7 +48,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatSidenavModule,
     FormsModule,
     ReactiveFormsModule,
-    
+    MatSnackBarModule
   ],
   declarations: []
 })

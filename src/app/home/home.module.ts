@@ -11,7 +11,12 @@ import { ContactInfoComponent } from './contact-info/contact-info.component';
 import { PaymentOptionComponent } from './payment-option/payment-option.component';
 import { BookingSummaryComponent } from './booking-summary/booking-summary.component';
 import { BookingSuccessComponent } from './booking-success/booking-success.component';
-import { ExpiryDateDirective } from '../directives/expiry-date.directive'
+import { ExpiryDateDirective } from '../directives/expiry-date.directive';
+import { OnlyDigitsDirective } from '../directives/only-digits.directive';
+import { CardNumberMaskDirective } from '../directives/card-number-mask.directive';
+import { OnlyAlphabetsDirective } from '../directives/only-alphabets.directive';
+
+import { LandingComponent } from './landing/landing.component'
 
 @NgModule({
   imports: [
@@ -29,7 +34,11 @@ import { ExpiryDateDirective } from '../directives/expiry-date.directive'
     PaymentOptionComponent,
     BookingSummaryComponent,
     BookingSuccessComponent,
-    ExpiryDateDirective
+    ExpiryDateDirective,
+    OnlyDigitsDirective,
+    CardNumberMaskDirective,
+    OnlyAlphabetsDirective,
+    LandingComponent,
   ]
 })
 export class HomeModule { }

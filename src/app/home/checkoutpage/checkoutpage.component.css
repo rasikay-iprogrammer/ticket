@@ -10,5 +10,37 @@ mat-list-item.mat-list-item{
 .list-item-active {
     font-weight: bold;
     background: rgba(0, 0, 0, 0.04);
-    color: #000000;
+    color: #432cb3    ;
   }
+  .mat-list-item{
+    color: #432cb3    ;
+
+  }
+  .sing-in-btn{
+    width: 90px;
+    height: 32px;
+    margin: 0 0 0 0px;
+    padding: 0px 0;
+    border-radius: 4px;
+    border: solid 1px #432cb3;
+    line-height: 31px;
+    color: #432cb3;
+  }
+  .sign-option{
+    height: 30px;
+    margin: 0;
+    margin-top: 14px;
+    color: #212224;
+}
+.mat-expansion-panel-header{
+    font-size: 11px;
+}
+.font-10{
+    font-size: 10px;
+}
+.alert-success{
+    color: green;
+}
+.alert-error{
+    color: red;
+}

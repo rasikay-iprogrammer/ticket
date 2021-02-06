@@ -1,0 +1,32 @@
+.sub-header{
+    margin: 0px 20px 0px 0px;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    color: #212224;
+
+}
+.sub-header .mat-icon{
+    vertical-align: top;
+}
+.movie-name{
+    font-size: 16px;
+    font-weight: bold;
+}
+.movie-name .mat-icon{
+    font-size: 38px;
+    position: relative;
+    top: -7px;
+    left: -11px;
+}
+.other-info{
+    font-size: 10px;}
+
+.other-info .mat-icon{
+        font-size: 18px;
+        position: relative;
+        top: 2px;
+        left: 0px;
+        width: 22px;
+    vertical-align: middle;
+    }

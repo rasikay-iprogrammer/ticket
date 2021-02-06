@@ -6,10 +6,10 @@
           <mat-label>Your email address</mat-label>
           <input matInput type="text" placeholder="Email Address" formControlName="email" >
           <mat-error  *ngIf="f.email.errors">
-            <span *ngIf="f.email.hasError('required') && (f.email.dirty || f.email.touched)">
+            <span class="invalid-login" *ngIf="f.email.hasError('required') && (f.email.dirty || f.email.touched)">
               Valid email Id required
             </span>
-            <span *ngIf="f.email.hasError('email') && (f.email.dirty || f.email.touched)">
+            <span class="invalid-login" *ngIf="f.email.hasError('email') && (f.email.dirty || f.email.touched)">
               Valid email Id required
             </span>
           </mat-error>
@@ -22,13 +22,13 @@
           <span matPrefix>+91&nbsp;</span>
 
           <mat-error *ngIf="f.phoneNumber.errors"> 
-            <span *ngIf="f.phoneNumber.hasError('required') && (f.phoneNumber.dirty || f.phoneNumber.touched)">
+            <span class="invalid-login" *ngIf="f.phoneNumber.hasError('required') && (f.phoneNumber.dirty || f.phoneNumber.touched)">
               Valid phone No required
             </span>
             <!-- <span *ngIf="(f.phoneNumber.hasError('minlength') || f.phoneNumber.hasError('maxlength')) && (f.phoneNumber.dirty || f.phoneNumber.touched)">
               Valid 10 Digit phone No required
             </span> -->
-            <span *ngIf="(f.phoneNumber.hasError('pattern')) && (f.phoneNumber.dirty || f.phoneNumber.touched)">
+            <span class="invalid-login" *ngIf="(f.phoneNumber.hasError('pattern')) && (f.phoneNumber.dirty || f.phoneNumber.touched)">
               Valid phone No is required
             </span>
           </mat-error>

@@ -35,13 +35,13 @@ export class CheckoutpageComponent implements OnInit ,AfterViewInit{
 
     }
     ngAfterViewInit() {
-      this.form.addControl('contactInfo', this.ContactInfoComponent.form);
-      this.form.addControl('paymentInfo', this.PaymentOptionComponent.form);
+      // this.form.addControl('contactInfo', this.ContactInfoComponent.form);
+      // this.form.addControl('paymentInfo', this.PaymentOptionComponent.form);
 
-      this.ContactInfoComponent.form.setParent(this.form);
-      this.PaymentOptionComponent.form.setParent(this.form);
+      // this.ContactInfoComponent.form.setParent(this.form);
+      // this.PaymentOptionComponent.form.setParent(this.form);
 
-      console.log( this.form)
+      // console.log( this.form)
 
     }
     changeTab(value:string){

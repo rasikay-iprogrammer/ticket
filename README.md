@@ -51,3 +51,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
      Validations on expiry date  - Required, Allows only numbers
      Validations on cvv          - Required
 10. Create page no found page. If user enter any other url then it will navigate to 404
+11. SCSS is used for text color and background color
+12. I have used reactive forms

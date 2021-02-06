@@ -23,12 +23,15 @@ export class ContactPage {
     return element(by.css('app-header .header span')).getText();
   }
   setContactPaymentInfo(contactInfo: any = this.contactInfo, paymentInfo: any = this.paymentInfo) {
-    element(by.name('email')).sendKeys(contactInfo.email);
-    element(by.name('phoneNumber')).sendKeys(contactInfo.phone);
-    element(by.name('creditCardNumber')).sendKeys(paymentInfo.creditCardNumber);
-    element(by.name('nameOnCard')).sendKeys(paymentInfo.nameOnCard);
-    element(by.name('expiryDate')).sendKeys(paymentInfo.expiryDate);
-    element(by.name('cvv')).sendKeys(paymentInfo.cvv);
+    element(by.css('[name="email"]')).sendKeys(contactInfo.email);
+    element(by.css('[name="phoneNumber"]')).sendKeys(contactInfo.phone);
+    element(by.css('[name="creditCardNumber"]')).sendKeys(paymentInfo.creditCardNumber);
+    element(by.css('[name="nameOnCard"]')).sendKeys(paymentInfo.nameOnCard);
+    element(by.css('[name="expiryDate"]')).sendKeys(paymentInfo.expiryDate);
+    element(by.css('[name="cvv"]')).sendKeys(paymentInfo.cvv);
+  
+    element(by.css('#btnSubmit')).click();
+
   }
   emptyIno() {
     element(by.name('email')).sendKeys('');

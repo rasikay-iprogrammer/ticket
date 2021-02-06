@@ -1,10 +1,9 @@
 <ng-container  [formGroup]="form">
-
     <div class="form-group row font-10">
       <div class="col-lg-6">
         <mat-form-field class="full-width-field">
           <mat-label>Your email address</mat-label>
-          <input matInput type="text" placeholder="Email Address" formControlName="email" >
+          <input matInput type="text" placeholder="Email Address" name="email" formControlName="email" >
           <mat-error  *ngIf="f.email.errors">
             <span class="invalid-login" *ngIf="f.email.hasError('required') && (f.email.dirty || f.email.touched)">
               Valid email Id required
@@ -18,23 +17,18 @@
       <div class="col-lg-6">
         <mat-form-field class="full-width-field">
           <mat-label>Your phone number</mat-label>
-          <input matInput type="text" appOnlyDigits maxlength="10" placeholder="Your phone number" formControlName="phoneNumber" >
+          <input matInput type="text" appOnlyDigits  name="phoneNumber" maxlength="10" placeholder="Your phone number" formControlName="phoneNumber" >
           <span matPrefix>+91&nbsp;</span>
 
           <mat-error *ngIf="f.phoneNumber.errors"> 
             <span class="invalid-login" *ngIf="f.phoneNumber.hasError('required') && (f.phoneNumber.dirty || f.phoneNumber.touched)">
               Valid phone No required
-            </span>
-            <!-- <span *ngIf="(f.phoneNumber.hasError('minlength') || f.phoneNumber.hasError('maxlength')) && (f.phoneNumber.dirty || f.phoneNumber.touched)">
-              Valid 10 Digit phone No required
-            </span> -->
+            </span>      
             <span class="invalid-login" *ngIf="(f.phoneNumber.hasError('pattern')) && (f.phoneNumber.dirty || f.phoneNumber.touched)">
               Valid phone No is required
             </span>
           </mat-error>
         </mat-form-field>
-      </div>          
- 
+      </div>
   </div>
-
 </ng-container>

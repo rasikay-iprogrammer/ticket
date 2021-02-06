@@ -1,87 +1,67 @@
 <div class="container">
+  <div class="row">
+    <div class="col-md-8 order-md-1">
+      <form [formGroup]="form">
+        <mat-accordion class="example-headers-align" multi [togglePosition]="'before'" class="font-10">
+          <mat-expansion-panel [expanded]="true">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="border-title">
+                Share Your Contact Details
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <app-contact-info></app-contact-info>
+          </mat-expansion-panel>
+          <mat-expansion-panel expanded disabled class="sign-req">
+            <mat-expansion-panel-header class="sign-option">
+              <mat-panel-title>
+                Please sign-in to use Nela Ticket Credits or Quikpay
+              </mat-panel-title>
+              <mat-panel-description>
+                <button mat-stroked-button class="sing-in-btn" (click)="expandPannel()">Sign-in</button>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+          </mat-expansion-panel>
+          <mat-expansion-panel [expanded]="true">
+            <mat-expansion-panel-header>
+              <mat-panel-title  class="border-title">
+                Payment Options
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="row font-10">
+              <div class="col-md-4 order-md-1 right-br ">
+                <mat-list role="list">
+                  <mat-list-item class="font-10" role="listitem" [class.list-item-active]="activeTab=='card'"
+                    (click)="changeTab('card')">Credit/Debit Card</mat-list-item>
+                  <mat-list-item class="font-10" role="listitem" [class.list-item-active]="activeTab=='netbanking'"
+                    (click)="changeTab('netbanking')">Netbanking</mat-list-item>
+                  <mat-list-item class="font-10" role="listitem" [class.list-item-active]="activeTab=='wallet'"
+                    (click)="changeTab('wallet')">Wallet</mat-list-item>
+                </mat-list>
+              </div>
+              <div class="col-md-8 order-md-2">
+                <div class="credit-card" *ngIf="activeTab=='card'">
+                  <app-payment-option></app-payment-option>
+                </div>
+                <div class="netbanking" *ngIf="activeTab=='netbanking'">
+                  <p>Netbanking</p>
+                </div>
+                <div class="wallet" *ngIf="activeTab=='wallet'">
+                  <p>wallet</p>
 
-<div class="row">
- 
-  <div class="col-md-8 order-md-1">
-    <form  [formGroup]="form">
+                </div>
 
-    <mat-accordion class="example-headers-align" multi [togglePosition]="'before'" class="font-10">
-      <mat-expansion-panel [expanded]="true" >
-        <mat-expansion-panel-header >
-          <mat-panel-title>
-            Share Your Contact Details
-          </mat-panel-title>
-          <!-- <mat-panel-description>
-            Type your name and age
-            <mat-icon>account_circle</mat-icon>
-          </mat-panel-description> -->
-        </mat-expansion-panel-header>
-    
-        <app-contact-info ></app-contact-info>
-    
-    
-      </mat-expansion-panel>
-      <mat-expansion-panel expanded disabled class="sign-req">
-        <mat-expansion-panel-header class="sign-option">
-          <mat-panel-title>
-            Please sign-in to use Nela Ticket Credits or Quikpay
-          </mat-panel-title>
-          <mat-panel-description>
-            <button mat-stroked-button class="sing-in-btn" (click)="expandPannel()">Sign-in</button>
-
-          </mat-panel-description>
-        </mat-expansion-panel-header>
-    
-        <!-- <mat-form-field>
-          <mat-label>Country</mat-label>
-          <input matInput>
-        </mat-form-field> -->
-      </mat-expansion-panel>
-    
-      <mat-expansion-panel [expanded]="true">
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            Payment Options
-          </mat-panel-title>
-        
-        </mat-expansion-panel-header>
-        <div class="row font-10"> 
-          <div class="col-md-4 order-md-1 right-br ">
-            <mat-list role="list">
-              <mat-list-item class="font-10" role="listitem" [class.list-item-active]="activeTab=='card'" (click)="changeTab('card')">Credit/Debit Card</mat-list-item>
-              <mat-list-item class="font-10" role="listitem" [class.list-item-active]="activeTab=='netbanking'" (click)="changeTab('netbanking')">Netbanking</mat-list-item>
-              <mat-list-item class="font-10" role="listitem"  [class.list-item-active]="activeTab=='wallet'" (click)="changeTab('wallet')">Wallet</mat-list-item>
-            </mat-list>
-          </div>
-          <div class="col-md-8 order-md-2">
-          <div class="credit-card" *ngIf="activeTab=='card'">
-            <app-payment-option></app-payment-option>
-          </div>
-          <div class="netbanking" *ngIf="activeTab=='netbanking'">
-            <p>Netbanking</p>
-          </div>
-          <div class="wallet" *ngIf="activeTab=='wallet'">
-            <p>wallet</p>
-
-          </div>
-
-          <div class="text-right "> 
-            <button mat-raised-button #btnSubmit type="button" (click)="submit()" color="primary">Make Payment</button>
-          </div>
-          </div>
-          
-          </div>
-      
-          
-      </mat-expansion-panel>
-      
-     
-    </mat-accordion>  
-
-    </form>
+                <div class="text-right ">
+                  <button mat-raised-button #btnSubmit type="button" (click)="submit()" color="primary">Make
+                    Payment</button>
+                </div>
+              </div>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </form>
+    </div>
+    <div class="col-md-4 order-md-2 mb-4">
+      <app-booking-summary></app-booking-summary>
+    </div>
   </div>
-  <div class="col-md-4 order-md-2 mb-4">
-    <app-booking-summary></app-booking-summary>  
-  </div>
-</div>
 </div>

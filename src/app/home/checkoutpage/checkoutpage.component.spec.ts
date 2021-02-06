@@ -3,6 +3,8 @@ import { FormBuilder, FormsModule, NgForm, ReactiveFormsModule } from '@angular/
 
 import { CheckoutpageComponent } from './checkoutpage.component';
 import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 describe('CheckoutpageComponent', () => {
   let component: CheckoutpageComponent;
@@ -13,9 +15,11 @@ describe('CheckoutpageComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ CheckoutpageComponent ],
       imports:[
+        HttpClientModule,
         FormsModule,
         ReactiveFormsModule,
-        RouterTestingModule
+        RouterTestingModule,
+        MatSnackBarModule
       ],
       providers: [
         // reference the new instance of formBuilder from above
@@ -42,7 +46,6 @@ describe('CheckoutpageComponent', () => {
       paymentInfo: null,
       contactInfo: null
     });
-    fixture.componentInstance.ngAfterViewInit();
 
   });
 });

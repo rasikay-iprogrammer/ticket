@@ -9,7 +9,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-checkoutpage',
   templateUrl: './checkoutpage.component.html',
-  styleUrls: ['./checkoutpage.component.css']
+  styleUrls: ['./checkoutpage.component.scss']
 })
 export class CheckoutpageComponent implements OnInit {
   form: FormGroup;
@@ -24,10 +24,8 @@ export class CheckoutpageComponent implements OnInit {
     this.form = this.formBuilder.group({
       contactInfo: this.formBuilder.group({}),
       paymentInfo: this.formBuilder.group({})
-
     });
   }
-
 
   ngOnInit() {
   }

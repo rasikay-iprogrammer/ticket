@@ -1,0 +1,9 @@
+@import "../../../assets/scss/variables";
+
+.header{
+    background-image: $header-bg-image ;
+}
+.while-text{
+    color: $text-color-3;
+    font-weight: bold;
+}

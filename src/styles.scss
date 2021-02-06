@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
+@import "assets/scss/variables";
+@import '~@angular/material/theming';
+
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+$custom-typography: mat-typography-config(
+      $font-family: $body-font-family,
+      $headline: mat-typography-level(32px, 48px, 700),
+      $body-1: mat-typography-level(16px, 24px, 500)
+);
+// Override typography for all Angular Material, including mat-base-typography and all components.
+@include angular-material-typography($custom-typography);
+.text-center {
+    flex: 1 1 auto;
+    text-align: center;  
+}
+.bgp-light{
+    background-color:$body-bg;
+
+}
+body{
+    font-family:$body-font-family !important;
+    font-size: 10px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color:$body-color;
+}
+.full-width-field {
+    width: 100%;
+ }
+ .font-10{
+    font-size: 10px;
+}
+.font-16{
+    font-size: 16px;
+}
+.pb-20{
+    padding-bottom: 20px;
+}

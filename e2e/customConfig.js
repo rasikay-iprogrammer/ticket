@@ -1,5 +1,5 @@
 var origFn = browser.driver.controlFlow().execute;
- 
+browser.ignoreSynchronization = true
 browser.driver.controlFlow().execute = function () {
     var args = arguments;
     

@@ -5,7 +5,7 @@ import { Payment } from 'src/app/model/payment.model';
 @Component({
   selector: 'app-payment-option',
   templateUrl: './payment-option.component.html',
-  styleUrls: ['./payment-option.component.css']
+  styleUrls: ['./payment-option.component.scss']
 })
 export class PaymentOptionComponent implements OnInit {
   form: FormGroup;

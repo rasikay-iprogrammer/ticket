@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-booking-summary',
   templateUrl: './booking-summary.component.html',
-  styleUrls: ['./booking-summary.component.css']
+  styleUrls: ['./booking-summary.component.scss']
 })
 export class BookingSummaryComponent implements OnInit {
   constructor(private ticketService: TicketService) { }
@@ -28,6 +28,7 @@ export class BookingSummaryComponent implements OnInit {
         ticketObj => {
           if (ticketObj.length > 0) {
             this.ticketinfo = ticketObj[0];
+            console.log(this.ticketinfo)
             this.ticketService.setBookingInfo(this.ticketinfo);
             this.calculateAmount();
             this.ticketService.showSnackBar('Booking data fetch successfully.', 'alert-success')

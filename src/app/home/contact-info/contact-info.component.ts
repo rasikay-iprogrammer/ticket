@@ -5,7 +5,7 @@ import { Contact } from 'src/app/model/contact.model';
 @Component({
   selector: 'app-contact-info',
   templateUrl: './contact-info.component.html',
-  styleUrls: ['./contact-info.component.css']
+  styleUrls: ['./contact-info.component.scss']
 })
 export class ContactInfoComponent implements OnInit {
   form: FormGroup;

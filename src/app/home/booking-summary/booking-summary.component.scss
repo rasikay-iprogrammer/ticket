@@ -1,11 +1,12 @@
+@import "../../../assets/scss/variables";
+
 .bg-pink{
-    background-color: #c86dd7 ;
+    background-color: $bg-pink ;
 }
 .movie-name{
     font-size: 16px;
     font-weight: bold;
     margin: 12px 0px 5px 0px;
-
 }
 .ticket-info{
     font-size: 13px;
@@ -15,10 +16,8 @@
 }
 .booking-summary{
     text-transform: uppercase;
-    color: #5c636f;
+    color: $text-color-1;
     font-size: 12px;
-
-
 }
 .booing-summary-info{
     padding: 0px;
@@ -26,7 +25,6 @@
 }
 .ticket-info{
     font-size: 10px;
-
 }
 .ticket-bold{
     font-size: 13px;

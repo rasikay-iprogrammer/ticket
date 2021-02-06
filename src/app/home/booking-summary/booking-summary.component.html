@@ -1,6 +1,5 @@
 <div class="container-fluid pt-2 bg-white">
     <div class="row">
-        
         <div class="col-xs-12 col-sm-12 col-lg-8">
             <p class="booking-summary"> Booking Summary
             </p>
@@ -13,23 +12,11 @@
                 <img src="./assets/poster.png"/>
             </div>
         </div>
-
-        
-        <!-- <div class="col-12">
-            <strong>{{ticketinfo.movieName}}</strong>
-            <p>{{ticketinfo.grade}}| {{ticketinfo.language}}</p>
-            <p> {{ticketinfo.theaterName}}</p>
-            <p> {{ticketinfo.seatNo}} </p>
-            <p> <strong>{{ticketinfo.bookDateTime | date:'d MMM, yyyy hh:mm a'}}</strong></p>
-
-        </div> -->
-
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-lg-8">
-          
             <p class="booing-summary-info ticket-info">{{ticketinfo.seatNo}}|</p>
-            <p class="booing-summary-info ticket-bold"> {{ticketinfo.bookDateTime | date:'d MMM, yyyy hh:mm a'}}</p>        
+            <p class="booing-summary-info ticket-bold"> {{ticketinfo.bookDateTime| date:'d MMM, yyyy hh:mm a'}}</p>        
         </div>
         <div class="col-xs-12 col-sm-12 col-lg-4">
           <p class="ticket-bold-no">7</p>
@@ -46,30 +33,25 @@
             <li class="font-10 list-group-item d-flex justify-content-between lh-condensed border-0 pb-0 pt-0">
                 <div>
                     <p class="">Sub Total</p>
-                    <!-- <small class="text-muted">Rs 1652</small> -->
                 </div>
                 <span class="font-weight-bold">{{ticketinfo.total| currency:'INR'}}</span>
             </li>
             <li class=" font-10 list-group-item d-flex justify-content-between lh-condensed border-0 pb-0 pt-0">
                 <div>
                     <p class="">Booking Fees</p>
-                    <!-- <small class="text-muted">Brief description</small> -->
                 </div>
                 <span class="font-weight-bold">{{globalConst.bookingFees| currency:'INR'}}</span>
             </li>
             <li class="font-10 list-group-item d-flex justify-content-between lh-condensed border-0 pb-0 pt-0">
                 <div>
                     <p class="">Integrated GST (IGST) @ {{globalConst.gstPercentage}}%</p>
-                    <!-- <small class="text-muted">Brief description</small> -->
                 </div>
                 <span class="font-weight-bold">{{ticketinfo.gstAmount | currency:'INR'}}</span>
             </li>
-           
         </ul>
     </div>
     <div class="row bg-pink">
         <div class="col-8 text-white pt-2 pb-2 font-10">Amount Payable</div>
         <div class="col-4 text-white pt-2 pb-2 font-16">{{ticketinfo.finalTotal| currency:'INR'}}</div>
-
     </div>
 </div>

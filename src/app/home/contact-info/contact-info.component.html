@@ -3,7 +3,7 @@
       <div class="col-lg-6">
         <mat-form-field class="full-width-field">
           <mat-label>Your email address</mat-label>
-          <input matInput type="text" placeholder="Email Address" name="email" formControlName="email" >
+          <input matInput type="text" placeholder="Email Address" class="email-addr" name="email" formControlName="email" >
           <mat-error  *ngIf="f.email.errors">
             <span class="invalid-login" *ngIf="f.email.hasError('required') && (f.email.dirty || f.email.touched)">
               Valid email Id required
@@ -17,7 +17,7 @@
       <div class="col-lg-6">
         <mat-form-field class="full-width-field">
           <mat-label>Your phone number</mat-label>
-          <input matInput type="text" appOnlyDigits  name="phoneNumber" maxlength="10" placeholder="Your phone number" formControlName="phoneNumber" >
+          <input matInput type="text" appOnlyDigits class="phone-no" name="phoneNumber" maxlength="10" placeholder="Your phone number" formControlName="phoneNumber" >
           <span matPrefix>+91&nbsp;</span>
 
           <mat-error *ngIf="f.phoneNumber.errors"> 

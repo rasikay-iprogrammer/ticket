@@ -23,13 +23,15 @@ export class ContactPage {
     return element(by.css('app-header .header span')).getText();
   }
   setContactPaymentInfo(contactInfo: any = this.contactInfo, paymentInfo: any = this.paymentInfo) {
-    element(by.css('[name="email"]')).sendKeys(contactInfo.email);
-    element(by.css('[name="phoneNumber"]')).sendKeys(contactInfo.phone);
-    element(by.css('[name="creditCardNumber"]')).sendKeys(paymentInfo.creditCardNumber);
-    element(by.css('[name="nameOnCard"]')).sendKeys(paymentInfo.nameOnCard);
-    element(by.css('[name="expiryDate"]')).sendKeys(paymentInfo.expiryDate);
-    element(by.css('[name="cvv"]')).sendKeys(paymentInfo.cvv);
-  
+
+    element(by.name('email')).sendKeys(contactInfo.email);
+    
+    element(by.name('phoneNumber')).sendKeys(contactInfo.phoneNumber);
+    element(by.name('creditCardNumber')).sendKeys(contactInfo.creditCardNumber);
+    element(by.name('nameOnCard')).sendKeys(contactInfo.nameOnCard);
+    element(by.name('expiryDate')).sendKeys(contactInfo.expiryDate);
+    element(by.name('cvv')).sendKeys(contactInfo.cvv);
+
     element(by.css('#btnSubmit')).click();
 
   }
@@ -49,19 +51,11 @@ export class ContactPage {
   }
 
   markTouch(){
-    // Object.keys(objectControl).forEach(controlName =>
-    //   objectControl[controlName].markAsTouched()
-    // );
-    // element(by.name('email')).markAsTouched()
+  
 
   }
   async getErrorMessage(){
     return element(by.cssContainingText('mat-error', 'alert')).getText();
-
-    // return element(by.css('mat-error span')).getText();
-    // return element(by.css('mat-error span'));
-
-
   }
   getPasswordTextbox() {  
     return element(by.tagName('mat-error'));  

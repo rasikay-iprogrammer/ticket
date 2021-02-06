@@ -18,37 +18,26 @@ describe('workspace-project App', () => {
   beforeEach(() => {
     page = new ContactPage();
   });
-  // it('when user trying to enter wrong details then will not allow to proceed and  display error message', async () => {
-  //   //  page.navigateTo();
-  //   // page.setContactPaymentInfo(contactInfo, paymentInfo);
-  //   // expect(await page.getTitleText()).toEqual('Checkout Page');
-  //   // page.getSubmitButton().click();
-  //   // expect(page.getErrorMessage()).toBeTruthy();
-
-  //   // expect(await page.getErrorMessage()).toEqual('Email must be a valid email address');
-
-
-  // });
   it('checkout form invalid', () => {
     page.navigateTo();
-    // page.emptyIno();
-    // page.getSubmitButton().click();
+    page.emptyIno();
+    page.getSubmitButton().click();
   });
 
   it('Valid checkout form', () => {
 
-    // page.navigateTo();
+    page.navigateTo();
     page.setContactPaymentInfo(contactInfo, paymentInfo);    
     page.navigateToSuccess();
   });
   
 
   
-  // afterEach(async () => {
-  //   // Assert that there are no errors emitted from the browser
-  //   const logs = await browser.manage().logs().get(logging.Type.BROWSER);
-  //   expect(logs).not.toContain(jasmine.objectContaining({
-  //     level: logging.Level.SEVERE,
-  //   } as logging.Entry));
-  // });
+  afterEach(async () => {
+    // Assert that there are no errors emitted from the browser
+    const logs = await browser.manage().logs().get(logging.Type.BROWSER);
+    expect(logs).not.toContain(jasmine.objectContaining({
+      level: logging.Level.SEVERE,
+    } as logging.Entry));
+  });
 });
